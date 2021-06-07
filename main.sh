@@ -23,12 +23,21 @@
 #test senha = csenha
 #echo $?
 
+echo "Digite seu username:  "
+read usrnanme
+echo -e "Tem certeza que seu username é: $usrnanme\n(y/n)"
+read choice
 echo "Digite sua senha:  "
 read senha
 echo "Confirme sua senha:  "
 read verificarsenha
 
-if [[ "$senha" == "$verificarsenha" ]]; then
+if [[ "$choice" -eq "y" ]]; then
+  echo ""
+elif [[ "$choice" -eq "n" ]]; then
+  echo "Digite novo username"
+  read username
+elif [[ "$senha" == "$verificarsenha" ]]; then
   echo "A senha é igual, pode prosseguir"
 else 
   echo "A senha não bate o senhor não pode prosseguir"
