@@ -36,7 +36,7 @@ if [[ "$choice" -eq "y" ]]; then
   echo ""
 elif [[ "$choice" -eq "n" ]]; then
   echo "Digite novo username"
-  read username
+  read usrname
 elif [[ "$senha" == "$verificarsenha" ]]; then
   echo "A senha é igual, pode prosseguir"
 else 
